@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+
+<body>
+
+    <!-- Image header -->
+
+    <div class="header">
+        <nav>
+            <!-- Logo with redirection to the Content Page -->
+            <a href="ContentPage_ST3.html"><img class="logoleft2" src="Picture2.png" alt="ginger cat"></a>
+
+        </nav>
+    </div>
+
+
+    <!-- Navigation between pages -->
+    <div class="nav-links">
+            <ul>
+                <li><a href="ContentPage_ST3.html">Content</a></li>
+                <li><a href="Team.html">Thumbnail</a></li>
+                <li><a href="UserProfile.html">User Profile</a></li>
+                <li><a href="PageEditor_ST3.html">Page Editor</a></li>
+
+                <li><a href="">Home Page (Student 1 and 2)</a></li> <!-- This is student 1 and 2 work -->
+
+            </ul>
+        </div>
+
+        <!-- Info text for the user -->
+
+        <h1>Personal information press start to begin</h1>
+        <h2>Type X if you do not want to answer</h2>
+  
+        <!-- Start button -->
+
+        <div class="center">
+
+            <button id="startButton1">Start</button>
+
+        </div>
+
+        <!-- Personal detail field to take information-->
+
+        <fieldset id="personalDetails">
+            <h2>Step 1: Personal Details</h2>
+            <p>
+                <strong> Q1: Enter your Name </strong>
+                <input type="text" id="profileAnswer1" class="hider">
+                <span id="detail1"></span>
+            </p>
+
+            <p>
+                <strong> Q2: Your Surname </strong>
+                <input type="text" id="profileAnswer2" class="hider">
+                <span id="detail2"></span>
+            </p>
+
+            <p>
+                <strong> Q3: Your Date of Birth </strong>
+                <input type="text" id="profileAnswer3" class="hider">
+                <span id="detail3"></span>
+            </p>
+
+            <!-- All the buttons for Personal Details -->
+
+            <button id="1resetButton">Reset</button>
+
+            <button id="1nextButton">Next</button><br><br>
+
+            <label for="1fileCompletion">Completed:</label>
+
+            <!-- Progress bar for Personal Details-->
+
+            <progress id="1fileCompletion" value="0" max="100"> </progress>
+
+            <label id="percentage1">%</label>
+
+        </fieldset>
+
+        <!-- Education detail field to take information-->
+
+        <fieldset id="educationDetails" class="hider">
+            <h2>Step 2: Education</h2>
+            <p>
+                <strong> Q1: Are you in education? </strong>
+                <input type="text" id="educationAnswer1" class="hider">
+                <span id="educationDetail1"></span>
+            </p>
+
+            <p>
+                <strong> Q2: What year are you in? </strong>
+                <input type="text" id="educationAnswer2" class="hider">
+                <span id="educationDetail2"></span>
+            </p>
+
+            <p>
+                <strong> Q3: When do you finish? </strong>
+                <input type="text" id="educationAnswer3" class="hider">
+                <span id="educationDetail3"></span>
+            </p>
+
+            <!-- All the buttons for Education Details -->
+
+            <button id="2resetButton">Reset</button>
+
+            <button id="2previousButton">Back</button>
+
+            <button id="2nextButton">Next</button><br><br>
+
+            <label for="2fileCompletion">Completed:</label>
+
+             <!-- Progress bar for Education Details-->
+
+
+            <progress id="2fileCompletion" value="0" max="100"> </progress>
+
+            <label id="percentage2">%</label>
+
+        </fieldset>
+
+        <!-- Contact detail field to take information-->
+
+        <fieldset id="contactDetails" class="hider">
+            <h2>Step 3: Contact Details</h2>
+            <p>
+                <strong> Q1: Mobile phone number? </strong>
+                <input type="text" id="contactAnswer1" class="hider">
+                <span id="contactDetails1"></span>
+            </p>
+
+            <p>
+                <strong> Q2: Email Address? </strong>
+                <input type="text" id="contactAnswer2" class="hider">
+                <span id="contactDetails2"></span>
+            </p>
+
+            <p>
+                <strong> Q3: Other contact information? </strong>
+                <input type="text" id="contactAnswer3" class="hider">
+                <span id="contactDetails3"></span>
+            </p>
+
+            <!-- All the buttons for Contact Details -->
+
+            <button id="3resetButton">Reset</button>
+
+            <button id="3previousButton">Back</button>
+
+            <button id="finishButton">Finish/Update</button><br><br>
+
+            <label for="3fileCompletion">Completed:</label>
+
+            <!-- Progress bar for Contact Details-->
+
+            <progress id="3fileCompletion" value="0" max="100"> </progress>
+
+            <label id="percentage3">%</label>
+            
+
+        </fieldset>
+
+        <!-- Final summary details -->
+
+        <fieldset id="summaryDetails" class="hider">
+            <h2>Summary</h2>
+            <p><strong>Name:</strong> <span id="summaryName"></span></p>
+            <p><strong>Surname:</strong> <span id="summarySurname"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="summaryDOB"></span></p>
+            <p><strong>Education Status:</strong> <span id="summaryEducation"></span></p>
+            <p><strong>Current Year:</strong> <span id="summaryYear"></span></p>
+            <p><strong>Finish Date:</strong> <span id="summaryFinishDate"></span></p>
+            <p><strong>Mobile:</strong> <span id="summaryMobile"></span></p>
+            <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+            <p><strong>Other Contact Info:</strong> <span id="summaryOtherInfo"></span></p>
+
+            <!-- Buttons for summary details -->
+
+            <button id="backTo3">Back</button>
+
+            <button id="resetAll">Reset all</button>
+            <br><br>
+
+            <label id="totalProgress">Completed:</label>
+
+            <!-- Progress bar for summary details -->
+
+            <progress id="FinalFileCompletion" value="0" max="100"> </progress>
+
+            <label id="finalPercentage">%</label>
+            
+        </fieldset>
+
+        <!-- Profile summary details -->
+
+        <fieldset id="ProfileSummaryDetails" class="hider">
+            <h2>Summary</h2>
+            <p><strong>Name:</strong> <span id="summaryName1"></span></p>
+            <p><strong>Surname:</strong> <span id="summarySurname1"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="summaryDOB1"></span></p>
+
+        </fieldset>
+
+        <!-- Education summary details -->
+
+        <fieldset id="educationDetailsSummary" class="hider">
+            <h2>Summary</h2>
+            <p><strong>Education Status:</strong> <span id="summaryEducation1"></span></p>
+            <p><strong>Current Year:</strong> <span id="summaryYear1"></span></p>
+            <p><strong>Finish Date:</strong> <span id="summaryFinishDate1"></span></p>
+
+        </fieldset>
+
+        <!-- Contact summary details -->
+
+        <fieldset id="contactDetailsSummary" class="hider">
+            <h2>Summary</h2>
+            <p><strong>Mobile:</strong> <span id="summaryMobile1"></span></p>
+            <p><strong>Email:</strong> <span id="summaryEmail1"></span></p>
+            <p><strong>Other Contact Info:</strong> <span id="summaryOtherInfo1"></span></p>
+
+        </fieldset>
+
+        <script>
+            /*Values being used to lock progression bar for profile section(prevent from increasing twice) and update the value*/
+
+        let finalProgressValue = 0;
+        let progressValue1 = 0;
+        let answeredQuestions1 = 0;
+        let profileChecked = false;
+        let profileChecked2 = false;
+        let profileChecked3 = false;
+        let nextDisable = true; /*Make sure user presses start*/
+
+        /*Unhide the section 1 when pressing start*/
+
+        document.getElementById("startButton1").addEventListener("click", function () {
+            document.getElementById("profileAnswer1").classList.remove("hider");
+            nextDisable = false;
+        });
+
+        /*Unhide the profile section 2 when typing or deleting anything and update progress bar */
+
+        document.getElementById("profileAnswer1").addEventListener("change", function () {
+            document.getElementById("profileAnswer2").classList.remove("hider");
+            detailedProfileSummary();
+            if (!profileChecked) {
+                answeredQuestions1++;
+                profileChecked = true;
+                updateProgress1();
+                autoUpdateSummary();
+                
+            }
+            if (document.getElementById("profileAnswer1").value === "" || document.getElementById("profileAnswer1").value.toLowerCase() === "x") {
+                profileChecked = false;
+                answeredQuestions1--;
+                updateProgress1();
+                autoUpdateSummary();
+            }
+            
+        });
+
+        /*Unhide the profile section 3 when typing or deleting anything and update progress bar */
+
+        document.getElementById("profileAnswer2").addEventListener("change", function () {
+            document.getElementById("profileAnswer3").classList.remove("hider");
+            detailedProfileSummary();
+            if (!profileChecked2) {
+                answeredQuestions1++;
+                profileChecked2 = true;
+                updateProgress1();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("profileAnswer2").value === ""|| document.getElementById("profileAnswer2").value.toLowerCase() === "x"){
+                profileChecked2 = false;
+                answeredQuestions1--;
+                updateProgress1();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Update  when typing or deleting anything and update progress bar */
+
+        document.getElementById("profileAnswer3").addEventListener("change", function () {
+            detailedProfileSummary();
+            if (!profileChecked3) {
+                answeredQuestions1++;
+                profileChecked3 = true;
+                updateProgress1();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("profileAnswer3").value === "" || document.getElementById("profileAnswer3").value.toLowerCase() === "x"){
+                profileChecked3 = false;
+                answeredQuestions1--;
+                updateProgress1();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Call the functions to reset the answers in this section */
+
+        document.getElementById("1resetButton").addEventListener("click", function () {
+            resetForm1();
+            autoUpdateSummary();
+            detailedProfileSummary();
+        });
+
+        /*Unhide the education details by calling show education function */
+
+        document.getElementById("1nextButton").addEventListener("click", function () {
+            if(!nextDisable){
+                document.getElementById("personalDetails").classList.add("hider");
+                document.getElementById("ProfileSummaryDetails").classList.add("hider");
+                showEducationQuestions();
+                educationDetailsSummary();
+            }
+            
+        });
+
+        /*Progressing bar for Profile section */
+
+        function updateProgress1() {
+            progressValue1 = (answeredQuestions1 / 3) * 100;
+            progressValue1 = progressValue1.toFixed(1);
+            document.getElementById("1fileCompletion").value = progressValue1;
+            document.getElementById("percentage1").textContent = progressValue1 + "%";
+        }
+
+         /*Reset Function (Change back the the values used to lock progression bar) and also removes all entered answers for this section*/
+
+        function resetForm1() {
+
+            document.getElementById("profileAnswer1").value = "";
+            document.getElementById("profileAnswer2").value = "";
+            document.getElementById("profileAnswer3").value = "";
+            profileChecked = false;
+            profileChecked2 = false;
+            profileChecked3 = false;
+            progressValue2 = 0;
+            answeredQuestions1 = 0;
+            document.getElementById("1fileCompletion").value = progressValue2;
+            updateProgress1();
+        }
+
+         /*Unhide education function */
+
+        function showEducationQuestions() {
+            document.getElementById("educationDetails").classList.remove("hider");
+            document.getElementById("educationAnswer1").classList.remove("hider");
+        }
+
+        /*Values being used to lock progression bar for education section (prevent from increasing twice) and update the value*/
+
+        let progressValue2 = 0;
+        let answeredQuestions2 = 0;
+        let educationChecked = false;
+        let educationChecked2 = false;
+        let educationChecked3 = false;
+
+        /*Unhide the Education section 2 when typing or deleting anything and update progress bar */
+
+        document.getElementById("educationAnswer1").addEventListener("change", function () {
+            document.getElementById("educationAnswer2").classList.remove("hider");
+            educationDetailsSummary();
+            if (!educationChecked) {
+                answeredQuestions2++;
+                educationChecked = true;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("educationAnswer1").value === "" || document.getElementById("educationAnswer1").value.toLowerCase() === "x"){
+                educationChecked = false;
+                answeredQuestions2--;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Unhide the Education section 3 when typing or deleting anything and update progress bar */
+
+        document.getElementById("educationAnswer2").addEventListener("change", function () {
+            document.getElementById("educationAnswer3").classList.remove("hider");
+            educationDetailsSummary();
+            if (!educationChecked2) {
+                answeredQuestions2++;
+                educationChecked2 = true;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("educationAnswer2").value === "" || document.getElementById("educationAnswer2").value.toLowerCase() === "x"){
+                educationChecked2 = false;
+                answeredQuestions2--;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Update when typing or deleting anything and update progress bar */
+
+        document.getElementById("educationAnswer3").addEventListener("change", function () {
+            educationDetailsSummary();
+            if (!educationChecked3) {
+                answeredQuestions2++;
+                educationChecked3 = true;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("educationAnswer3").value === "" || document.getElementById("educationAnswer3").value.toLowerCase() === "x"){
+                educationChecked3 = false;
+                answeredQuestions2--;
+                updateProgress2();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Call the functions to reset the answers in this section */
+
+        document.getElementById("2resetButton").addEventListener("click", function () {
+            resetForm2();
+            autoUpdateSummary();
+            educationDetailsSummary();
+        });
+
+        /*Hide the education section and summary as well as unhide personal details and update its summary when back button pressing */
+
+        document.getElementById("2previousButton").addEventListener("click", function () {
+            document.getElementById("educationDetails").classList.add("hider");
+            document.getElementById("personalDetails").classList.remove("hider");
+            document.getElementById("educationDetailsSummary").classList.add("hider");
+            detailedProfileSummary();
+
+        });
+
+         /*Hide the education section and summary as well as unhide contact details and update its summary when second next button pressing */
+
+        document.getElementById("2nextButton").addEventListener("click", function () {
+            document.getElementById("contactDetails").classList.remove("hider");
+            document.getElementById("educationDetails").classList.add("hider");
+            document.getElementById("educationDetailsSummary").classList.add("hider");
+            document.getElementById("contactDetailsSummary").classList.remove("hider");
+            showContactQuestions();
+        });
+
+        /*Progressing bar for Profile section */
+
+        function updateProgress2() {
+            progressValue2 = (answeredQuestions2 / 3) * 100;
+            progressValue2 = progressValue2.toFixed(1);
+            document.getElementById("2fileCompletion").value = progressValue2;
+            document.getElementById("percentage2").textContent = progressValue2 + "%";
+        }
+
+        /*Reset Function (Change back the the values used to lock progression bar) and also removes all entered answers for this section*/
+
+
+        function resetForm2() {
+
+            document.getElementById("educationAnswer1").value = "";
+            document.getElementById("educationAnswer2").value = "";
+            document.getElementById("educationAnswer3").value = "";
+            educationChecked = false;
+            educationChecked2 = false;
+            educationChecked3 = false;
+            progressValue2 = 0;
+            answeredQuestions2 = 0;
+            document.getElementById("2fileCompletion").value = progressValue2;
+            updateProgress2();
+        }
+
+          /*Unhide Contact details function */
+
+        function showContactQuestions() {
+            document.getElementById("contactDetails").classList.remove("hider");
+            document.getElementById("contactAnswer1").classList.remove("hider");
+        }
+
+        /*Values being used to lock progression bar for contact section (prevent from increasing twice) and update the value*/
+
+        let progressValue3 = 0;
+        let answeredQuestions3 = 0;
+        let contactChecked = false;
+        let contactChecked2 = false;
+        let contactChecked3 = false;
+
+        /*Unhide the Contact section 2 when typing or deleting anything and update progress bar */
+
+        document.getElementById("contactAnswer1").addEventListener("change", function () {
+            document.getElementById("contactAnswer2").classList.remove("hider");
+            contactDetailsSummary();
+            if (!contactChecked) {
+                answeredQuestions3++;
+                contactChecked = true;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("contactAnswer1").value === "" || document.getElementById("contactAnswer1").value.toLowerCase() === "x"){
+                contactChecked = false;
+                answeredQuestions3--;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Unhide the Contact section 3 when typing or deleting anything and update progress bar */
+
+        document.getElementById("contactAnswer2").addEventListener("change", function () {
+            document.getElementById("contactAnswer3").classList.remove("hider");
+            contactDetailsSummary();
+            if (!contactChecked2) {
+                answeredQuestions3++;
+                contactChecked2 = true;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("contactAnswer2").value === "" || document.getElementById("contactAnswer2").value.toLowerCase() === "x"){
+                contactChecked2 = false;
+                answeredQuestions3--;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Update when typing or deleting anything and update progress bar */
+
+        document.getElementById("contactAnswer3").addEventListener("change", function () {
+            contactDetailsSummary();
+            if (!contactChecked3) {
+                answeredQuestions3++;
+                contactChecked3 = true;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+
+            if (document.getElementById("contactAnswer3").value === "" || document.getElementById("contactAnswer3").value.toLowerCase() === "x"){
+                contactChecked3 = false;
+                answeredQuestions3--;
+                updateProgress3();
+                autoUpdateSummary();
+            }
+        });
+
+        /*Call the functions to reset the answers in this section */
+
+        document.getElementById("3resetButton").addEventListener("click", function () {
+            resetForm3();
+            autoUpdateSummary();
+            contactDetailsSummary();
+        });
+
+         /*Unhide the education section and summary as well as unhide contact details and summary updating education when back button pressing */
+
+
+        document.getElementById("3previousButton").addEventListener("click", function () {
+            document.getElementById("contactDetails").classList.add("hider");
+            document.getElementById("educationDetails").classList.remove("hider");
+            document.getElementById("summaryDetails").classList.add("hider");
+            document.getElementById("educationDetailsSummary").classList.remove("hider");
+            document.getElementById("contactDetailsSummary").classList.add("hider");
+        });
+
+        /*Hide contact details and summary then call detail summary function */
+
+
+        document.getElementById("finishButton").addEventListener("click", function () {
+            document.getElementById("contactDetailsSummary").classList.add("hider");
+            document.getElementById("contactDetails").classList.add("hider");
+            detailedSummary();
+        });
+
+        /*Progressing bar for Profile section */
+
+
+        function updateProgress3() {
+            progressValue3 = (answeredQuestions3 / 3) * 100;
+            progressValue3 = progressValue3.toFixed(1);
+            document.getElementById("3fileCompletion").value = progressValue3;
+            document.getElementById("percentage3").textContent = progressValue3 + "%";
+        }
+
+         /*Reset Function (Change back the the values used to lock progression bar) and also removes all entered answers for this section*/
+
+
+        function resetForm3() {
+
+            document.getElementById("contactAnswer1").value = "";
+            document.getElementById("contactAnswer2").value = "";
+            document.getElementById("contactAnswer3").value = "";
+            contactChecked = false;
+            contactChecked2 = false;
+            contactChecked3 = false;
+            progressValue3 = 0;
+            answeredQuestions3 = 0;
+            document.getElementById("3fileCompletion").value = progressValue3;
+            updateProgress3();
+        }
+
+        /*Function to show profile summary and remove the hidden class*/
+
+        function detailedProfileSummary() {
+            document.getElementById("ProfileSummaryDetails").classList.remove("hider");
+            document.getElementById("summaryName1").textContent = document.getElementById("profileAnswer1").value;
+            document.getElementById("summarySurname1").textContent = document.getElementById("profileAnswer2").value;
+            document.getElementById("summaryDOB1").textContent = document.getElementById("profileAnswer3").value;
+            
+        }
+
+        /*Function to reset profile summary*/
+
+        function detailedProfileSummaryReset() {
+            document.getElementById("summaryName1").textContent = document.getElementById("profileAnswer1").value;
+            document.getElementById("summarySurname1").textContent = document.getElementById("profileAnswer2").value;
+            document.getElementById("summaryDOB1").textContent = document.getElementById("profileAnswer3").value;
+            
+        }
+
+        /*Function to show education summary and remove the hidden class*/
+
+        function educationDetailsSummary() {
+            document.getElementById("educationDetailsSummary").classList.remove("hider");
+            document.getElementById("summaryEducation1").textContent = document.getElementById("educationAnswer1").value;
+            document.getElementById("summaryYear1").textContent = document.getElementById("educationAnswer2").value;
+            document.getElementById("summaryFinishDate1").textContent = document.getElementById("educationAnswer3").value;
+            
+        }
+        
+        /*Function to reset profile summary*/
+
+        function educationDetailsSummaryReset() {
+            document.getElementById("summaryEducation1").textContent = document.getElementById("educationAnswer1").value;
+            document.getElementById("summaryYear1").textContent = document.getElementById("educationAnswer2").value;
+            document.getElementById("summaryFinishDate1").textContent = document.getElementById("educationAnswer3").value;
+            
+        }
+
+        /*Function to show contact education summary and remove the hidden class*/
+
+        function contactDetailsSummary() {
+            document.getElementById("contactDetailsSummary").classList.remove("hider");
+            document.getElementById("summaryMobile1").textContent = document.getElementById("contactAnswer1").value;
+            document.getElementById("summaryEmail1").textContent = document.getElementById("contactAnswer2").value;
+            document.getElementById("summaryOtherInfo1").textContent = document.getElementById("contactAnswer3").value;;
+            
+        }
+
+        /*Function to reset profile summary*/
+
+        function contactDetailsSummaryReset() {
+            document.getElementById("summaryMobile1").textContent = document.getElementById("contactAnswer1").value;
+            document.getElementById("summaryEmail1").textContent = document.getElementById("contactAnswer2").value;
+            document.getElementById("summaryOtherInfo1").textContent = document.getElementById("contactAnswer3").value;;
+            
+        }
+
+        /*Function to show overall summary at the end and remove the hidden class also updates the final progression bar*/
+
+        function detailedSummary() {
+            document.getElementById("summaryDetails").classList.remove("hider");
+            document.getElementById("summaryName").textContent = document.getElementById("profileAnswer1").value;
+            document.getElementById("summarySurname").textContent = document.getElementById("profileAnswer2").value;
+            document.getElementById("summaryDOB").textContent = document.getElementById("profileAnswer3").value;
+            document.getElementById("summaryEducation").textContent = document.getElementById("educationAnswer1").value;
+            document.getElementById("summaryYear").textContent = document.getElementById("educationAnswer2").value;
+            document.getElementById("summaryFinishDate").textContent = document.getElementById("educationAnswer3").value;
+            document.getElementById("summaryMobile").textContent = document.getElementById("contactAnswer1").value;
+            document.getElementById("summaryEmail").textContent = document.getElementById("contactAnswer2").value;
+            document.getElementById("summaryOtherInfo").textContent = document.getElementById("contactAnswer3").value;
+
+            finalProgressValue = ((answeredQuestions1 + answeredQuestions2 + answeredQuestions3) / 9) * 100;
+            finalProgressValue = finalProgressValue.toFixed(1);
+            document.getElementById("FinalFileCompletion").value = finalProgressValue;
+            document.getElementById("finalPercentage").textContent = finalProgressValue + "%";
+            updateProgress1();
+            updateProgress2();
+            updateProgress3();
+
+        }
+
+        /*Call the reset all answers function*/
+
+        document.getElementById("resetAll").addEventListener("click", function () {
+            resetAllForms()
+        });
+
+        /*Call the back to 3 function*/
+
+        document.getElementById("backTo3").addEventListener("click", function () {
+            backTo3();
+        });
+
+        /*Hides the final summary and unhides the previous page being the contact details and summary*/
+
+
+        function backTo3(){
+            document.getElementById("summaryDetails").classList.add("hider");
+            document.getElementById("contactDetails").classList.remove("hider");
+            document.getElementById("contactDetailsSummary").classList.remove("hider");
+        }
+
+        /*Resets all the answers entered also changes the progression bar checked values and resets and updates the progression bars, then takes users to personal details (first page)*/
+
+        function resetAllForms() {
+
+            document.getElementById("profileAnswer1").value = "";
+            document.getElementById("profileAnswer2").value = "";
+            document.getElementById("profileAnswer3").value = "";
+            profileChecked = false;
+            profileChecked2 = false;
+            profileChecked3 = false;
+
+            progressValue2 = 0;
+            answeredQuestions1 = 0;
+            document.getElementById("1fileCompletion").value = progressValue2;
+
+            document.getElementById("educationAnswer1").value = "";
+            document.getElementById("educationAnswer2").value = "";
+            document.getElementById("educationAnswer3").value = "";
+            educationChecked = false;
+            educationChecked2 = false;
+            educationChecked3 = false;
+
+            progressValue2 = 0;
+            answeredQuestions2 = 0;
+            document.getElementById("2fileCompletion").value = progressValue2;
+
+            document.getElementById("contactAnswer1").value = "";
+            document.getElementById("contactAnswer2").value = "";
+            document.getElementById("contactAnswer3").value = "";
+            contactChecked = false;
+            contactChecked2 = false;
+            contactChecked3 = false;
+
+            progressValue3 = 0;
+            answeredQuestions3 = 0;
+            document.getElementById("3fileCompletion").value = progressValue3;
+
+            detailedSummary();
+            detailedProfileSummaryReset();
+            educationDetailsSummaryReset();
+            contactDetailsSummaryReset();
+
+            document.getElementById("summaryDetails").classList.add("hider");
+            document.getElementById("personalDetails").classList.remove("hider");
+            
+        }
+
+         /*This updates all of the answers as well as the final progression bar*/
+
+        function autoUpdateSummary(){
+            document.getElementById("summaryName").textContent = document.getElementById("profileAnswer1").value;
+            document.getElementById("summarySurname").textContent = document.getElementById("profileAnswer2").value;
+            document.getElementById("summaryDOB").textContent = document.getElementById("profileAnswer3").value;
+            document.getElementById("summaryEducation").textContent = document.getElementById("educationAnswer1").value;
+            document.getElementById("summaryYear").textContent = document.getElementById("educationAnswer2").value;
+            document.getElementById("summaryFinishDate").textContent = document.getElementById("educationAnswer3").value;
+            document.getElementById("summaryMobile").textContent = document.getElementById("contactAnswer1").value;
+            document.getElementById("summaryEmail").textContent = document.getElementById("contactAnswer2").value;
+            document.getElementById("summaryOtherInfo").textContent = document.getElementById("contactAnswer3").value;
+
+            finalProgressValue = ((answeredQuestions1 + answeredQuestions2 + answeredQuestions3) / 9) * 100;
+            document.getElementById("FinalFileCompletion").value = finalProgressValue;
+        }
+        
+    </script><br><br>
+
+    <!-- Footer details -->
+
+    <div class="footer">
+        <footer>
+            <p>© 2024 Qaulity Education, Inc. All Rights Reserved</p>
+        </footer>
+    </div>
+
+    </body>
+
+</html>
